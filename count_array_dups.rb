@@ -1,17 +1,19 @@
 ### Ruby code to get a unique count of duplicates from array
 
-@array = [1,2,3,3,5,4,100,100,100,100,1000,1000,1000,1,1,1,2,2]
 
-def dupcount(val)
+def DistinctList(arr)
   hash = Hash.new(0)
-  val.each do |x|
+  array2=[]
+  arr.each do |x|
     hash[x]+=1
   end
-  hash.each do |key,val|
-    puts "The number #{key} dup count is #{val}"
+  hash.each do |k,v|
+    if v>1
+      puts k
+    end
   end
 end
 
-dupcount @array
+DistinctList([1, 2, 2, 2, 3])
 
 
